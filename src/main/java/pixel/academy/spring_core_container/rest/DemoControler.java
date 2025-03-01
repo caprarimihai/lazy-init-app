@@ -14,8 +14,9 @@ public class DemoControler {
     //constructor
 
     @Autowired
-    public void DemoController( @Qualifier("italianChef") Chef theChef) {
+    public void DemoController(  Chef theChef) {
         myChef = theChef;
+        System.out.println("In constructor:" + getClass().getSimpleName());
     }
     @GetMapping("/dailyrecipe")
     public String getDailyRecipe() {
